@@ -32,5 +32,5 @@ void MainMenuState::update(float dt)
 
 void MainMenuState::draw()
 {
-    
+    _window.draw(_menuText);
 }
