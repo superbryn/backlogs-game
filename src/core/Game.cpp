@@ -1,4 +1,5 @@
 #include "core/Game.hpp"
+#include "core/MainMenuState.hpp"
 
 Game::Game(int width, int height, std::string title)
 {
@@ -25,7 +26,7 @@ void Game::run()
         {
             _stateManager.getActiveState() -> handleInput();
             _stateManager.getActiveState() -> update(dt);
-
+            _window.clear(sf::Color::Black);
             _stateManager.getActiveState() -> draw();
             _window.display();
         }
