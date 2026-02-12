@@ -1,20 +1,17 @@
 #include "core/Game.hpp"
-#include <iostream>
 #include <lua/lua.hpp>
-#include <ostream>
 #include <string>
 
 int main() {
-    int height,width;
-    std::string title;
+    int height = 100,width = 100;
+    std::string title = "Script aint working properly";
     
     // The Lua Part (Might Change it after testing)
     lua_State *L = luaL_newstate();
     luaL_openlibs(L);
     
-    if(luaL_dofile(L, "./script/config.lua") != LUA_OK)
+    if(luaL_dofile(L, "scripts/config.lua") != LUA_OK)
     {
-        std::cerr << "Aint Working Dawg" << lua_tostring(L, -1) << std::endl;
         lua_close(L);
         return 1;
     }
@@ -49,7 +46,7 @@ int main() {
     lua_pop(L, 1);
     lua_close(L);
     
-    Game game(1280, 720, "Test: Working");
+    Game game(width, height, title);
     game.run();
     
     return 0;

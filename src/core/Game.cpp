@@ -4,6 +4,7 @@
 Game::Game(int width, int height, std::string title)
 {
     _window.create(sf::VideoMode({static_cast<unsigned int>(width), static_cast<unsigned int>(height)}), title, sf::Style::Close | sf::Style::Titlebar);
+    _window.setFramerateLimit(60);
 }
 
 void Game::run()
