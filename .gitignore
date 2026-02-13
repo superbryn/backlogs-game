@@ -1,0 +1,13 @@
+# Object files
+*.o
+*.obj
+
+# Game execu
+game
+
+# Apple Specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+.zed/
