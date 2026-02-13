@@ -2,6 +2,7 @@
 #include "core/MainMenuState.hpp"
 #include "core/StateManager.hpp"
 
+
 MainMenuState::MainMenuState(StateManager& stateManager, sf::RenderWindow& window) : _stateManager(stateManager), _window(window), _menuText(_font) {}
 
 void MainMenuState::init()
@@ -11,7 +12,7 @@ void MainMenuState::init()
         std::cerr << "Error while opening font file!" << std::endl;
     }
     
-    _menuText.setString("SSET Tour 2D");
+    _menuText.setString("Fuck You Cheeky Bastard");
     _menuText.setCharacterSize(50);
     _menuText.setFillColor(sf::Color::Blue);
     
