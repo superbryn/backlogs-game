@@ -10,4 +10,4 @@ game
 .AppleDouble
 .LSOverride
 
-compile_flags.txt
+*.txt
