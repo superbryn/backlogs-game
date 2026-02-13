@@ -11,3 +11,4 @@ game
 .LSOverride
 
 .zed/
+compile_flags.txt
