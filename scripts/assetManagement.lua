@@ -1,3 +1,4 @@
 Assets = {
-    font_path = "assets/fonts/JacobyTTBGOBlack.ttf"
+    font_path = "assets/fonts/JacobyTTBGOBlack.ttf",
+    texture_button = ""
 }

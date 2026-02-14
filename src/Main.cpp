@@ -1,5 +1,5 @@
 #include "core/Game.hpp"
-#include <lua/lua.hpp>
+#include <sol/sol.hpp>
 #include <string>
 
 int main() {
@@ -7,6 +7,7 @@ int main() {
     std::string title = "Script aint working properly";
     
     // The Lua Part (Might Change it after testing)
+    /* 
     lua_State *L = luaL_newstate();
     luaL_openlibs(L);
     
@@ -45,6 +46,7 @@ int main() {
     }
     lua_pop(L, 1);
     lua_close(L);
+    */
     
     Game game(width, height, title);
     game.run();

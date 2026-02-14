@@ -7,7 +7,7 @@ class MainMenuState : public State
 {
 public:
     MainMenuState(StateManager& stateManager, sf::RenderWindow& window);
-    
+
     void init() override;
     void handleInput() override;
     void update(float dt) override;

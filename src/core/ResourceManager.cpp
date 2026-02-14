@@ -1,8 +1,24 @@
 #include "core/ResourceManager.hpp"
 #include <iostream>
+#include <map>
+#include <string>
 
 std::map<std::string, sf::Texture> ResourceManager::_textures;
 std::map<std::string, sf::Font> ResourceManager::_fonts;
+std::map<std::string, std::string>ResourceManager::_assetPaths;
+
+void ResourceManager::init(lua_State *L)
+{
+    lua_getglobal(L, "Assets");
+    if(lua_istable(L, -1))
+    {
+        lua_pushnil(L);
+        while(lua_next(L, -2) != 0)
+        {
+            
+        }
+    }
+}
 
 sf::Texture& ResourceManager::getTexture(const std::string &filepath)
 {

@@ -2,11 +2,10 @@
 #include "core/MainMenuState.hpp"
 #include "core/StateManager.hpp"
 
-
 MainMenuState::MainMenuState(StateManager& stateManager, sf::RenderWindow& window) : _stateManager(stateManager), _window(window), _menuText(_font) {}
 
 void MainMenuState::init()
-{
+{   
     if(!_font.openFromFile("assets/fonts/JacobyTTBGOBlack.ttf"))
     {
         std::cerr << "Error while opening font file!" << std::endl;
